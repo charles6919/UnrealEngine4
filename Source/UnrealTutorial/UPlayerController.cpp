@@ -3,6 +3,15 @@
 
 #include "UPlayerController.h"
 
+void AUPlayerController::BeginPlay()
+{
+	Super::BeginPlay();
+
+	//게임 모드로 들어가도록 하는 함수
+	FInputModeGameOnly InputMode;
+	SetInputMode(InputMode);
+}
+
 void AUPlayerController::PostInitializeComponents()
 {
 	Super::PostInitializeComponents();

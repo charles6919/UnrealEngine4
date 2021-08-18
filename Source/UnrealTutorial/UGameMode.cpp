@@ -2,12 +2,12 @@
 
 
 #include "UGameMode.h"
-#include "UPawn.h"
+#include "UCharacter.h"
 #include "UPlayerController.h"
 
 AUGameMode::AUGameMode()
 {
-	DefaultPawnClass = AUPawn::StaticClass();
+	DefaultPawnClass = AUCharacter::StaticClass();
 	PlayerControllerClass = AUPlayerController::StaticClass();
 }
 

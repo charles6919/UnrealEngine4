@@ -32,6 +32,13 @@ AUPawn::AUPawn()
 	{
 		mMesh->SetSkeletalMesh(SK_CARDBOARD.Object);
 	}
+
+	mMesh->SetAnimationMode(EAnimationMode::AnimationBlueprint);
+	static ConstructorHelpers::FClassFinder<UAnimInstance> WARRIOR_ANIM(TEXT("/Game/Book/Animations/WarriorAnimBP.WarriorAnimBP_C"));
+	if (WARRIOR_ANIM.Succeeded())
+	{
+		mMesh->SetAnimInstanceClass(WARRIOR_ANIM.Class);
+	}
 }
 
 void AUPawn::UpDown(float NewAxisValue)
